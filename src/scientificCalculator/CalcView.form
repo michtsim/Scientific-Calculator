@@ -34,9 +34,12 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="Button7" max="32767" attributes="0"/>
-                          <Component id="Button4" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="Button7" max="32767" attributes="0"/>
+                              <Component id="Button4" min="-2" pref="50" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="ClearButton" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -69,7 +72,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="RootButton" min="-2" pref="50" max="-2" attributes="0"/>
-                                          <Component id="AccButton" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="ExpButton" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -130,7 +133,8 @@
                   <Component id="Button0" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="DivButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="ResButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="AccButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="ExpButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="ClearButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
           </Group>
@@ -172,6 +176,9 @@
           <Dimension value="[50, 38]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button3MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button4">
       <Properties>
@@ -184,6 +191,7 @@
         </Property>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button4MouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button4ActionPerformed"/>
       </Events>
     </Component>
@@ -191,17 +199,24 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button5MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button6">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button6MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button7">
       <Properties>
         <Property name="text" type="java.lang.String" value="7"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button7MouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button7ActionPerformed"/>
       </Events>
     </Component>
@@ -209,16 +224,25 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button9MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button8">
       <Properties>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button8MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Button0">
       <Properties>
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button0MouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="AddButton">
       <Properties>
@@ -254,7 +278,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ResButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="AccButton">
+    <Component class="javax.swing.JButton" name="ExpButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="^"/>
       </Properties>
@@ -273,6 +297,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#x221a;"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ClearButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clr"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ClearButtonMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
