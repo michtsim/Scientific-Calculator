@@ -37,6 +37,9 @@ public class CalcView extends javax.swing.JFrame {
         AddButton.addActionListener(adder);
     } 
     
+    void divButton(ActionListener div) {
+        DivButton.addActionListener(div);
+    }
     
     void resBtn(ActionListener res){
         ResButton.addActionListener(res);
@@ -91,6 +94,11 @@ public class CalcView extends javax.swing.JFrame {
         Button2.setText("2");
         Button2.setMaximumSize(new java.awt.Dimension(50, 38));
         Button2.setMinimumSize(new java.awt.Dimension(50, 38));
+        Button2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button2MouseClicked(evt);
+            }
+        });
 
         Button3.setText("3");
         Button3.setMaximumSize(new java.awt.Dimension(50, 38));
@@ -256,7 +264,7 @@ public class CalcView extends javax.swing.JFrame {
     }//GEN-LAST:event_Button7ActionPerformed
 
     private void DivButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DivButtonActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_DivButtonActionPerformed
 
     private void ResButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResButtonActionPerformed
@@ -270,6 +278,10 @@ public class CalcView extends javax.swing.JFrame {
     private void AddButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_AddButtonMouseClicked
+
+    private void Button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button2MouseClicked
+        Screen.setText(Screen.getText() + "2" );
+    }//GEN-LAST:event_Button2MouseClicked
 
     /**
      * @param args the command line arguments

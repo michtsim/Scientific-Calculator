@@ -17,6 +17,10 @@ public class OperatorsModel {
        CalcSol = number1 + number2; 
    }
    
+   public void divoperation(int number1, int number2) {
+       CalcSol = number1 / number2;
+   }
+   
    public int getCalcSol(){
        return CalcSol;
    }

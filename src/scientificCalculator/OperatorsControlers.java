@@ -23,6 +23,7 @@ public class OperatorsControlers {
         this.theView = theView;
         this.opModel = opModel; 
         theView.addButton(new addCalcButton());
+        theView.divButton(new divCalcButton());
         theView.resBtn(new resCalcButton());
     }
      
@@ -34,6 +35,11 @@ public class OperatorsControlers {
                 number2 = Integer.parseInt(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.addoperation(number1, number2);
+                theView.setsol(opModel.getCalcSol());
+            } else if ("/".equals(operate)) {
+                number2 = Integer.parseInt(theView.getScreen());
+                theView.screenClear();
+                opModel.divoperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             }
             
@@ -51,6 +57,16 @@ public class OperatorsControlers {
             theView.screenClear();
         }  
     }  
+    
+    class divCalcButton implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            number1 = Integer.parseInt(theView.getScreen().trim());
+            operate = "/";
+            theView.screenClear();
+        }
+    }
     
     
     
