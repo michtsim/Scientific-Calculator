@@ -41,6 +41,10 @@ public class CalcView extends javax.swing.JFrame {
         DivButton.addActionListener(div);
     }
     
+    void expButton(ActionListener exp) {
+        ExpButton.addActionListener(exp);
+    }
+    
     void resBtn(ActionListener res){
         ResButton.addActionListener(res);
     }
@@ -75,10 +79,11 @@ public class CalcView extends javax.swing.JFrame {
         MultButton = new javax.swing.JButton();
         DivButton = new javax.swing.JButton();
         ResButton = new javax.swing.JButton();
-        AccButton = new javax.swing.JButton();
+        ExpButton = new javax.swing.JButton();
         LnButton = new javax.swing.JButton();
         LogButton = new javax.swing.JButton();
         RootButton = new javax.swing.JButton();
+        ClearButton = new javax.swing.JButton();
 
         jButton9.setText("jButton9");
 
@@ -103,10 +108,20 @@ public class CalcView extends javax.swing.JFrame {
         Button3.setText("3");
         Button3.setMaximumSize(new java.awt.Dimension(50, 38));
         Button3.setMinimumSize(new java.awt.Dimension(50, 38));
+        Button3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button3MouseClicked(evt);
+            }
+        });
 
         Button4.setText("4");
         Button4.setMaximumSize(new java.awt.Dimension(50, 38));
         Button4.setMinimumSize(new java.awt.Dimension(50, 38));
+        Button4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button4MouseClicked(evt);
+            }
+        });
         Button4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button4ActionPerformed(evt);
@@ -114,10 +129,25 @@ public class CalcView extends javax.swing.JFrame {
         });
 
         Button5.setText("5");
+        Button5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button5MouseClicked(evt);
+            }
+        });
 
         Button6.setText("6");
+        Button6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button6MouseClicked(evt);
+            }
+        });
 
         Button7.setText("7");
+        Button7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button7MouseClicked(evt);
+            }
+        });
         Button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button7ActionPerformed(evt);
@@ -125,10 +155,25 @@ public class CalcView extends javax.swing.JFrame {
         });
 
         Button9.setText("9");
+        Button9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button9MouseClicked(evt);
+            }
+        });
 
         Button8.setText("8");
+        Button8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button8MouseClicked(evt);
+            }
+        });
 
         Button0.setText("0");
+        Button0.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button0MouseClicked(evt);
+            }
+        });
 
         AddButton.setText("+");
         AddButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -155,13 +200,20 @@ public class CalcView extends javax.swing.JFrame {
             }
         });
 
-        AccButton.setText("^");
+        ExpButton.setText("^");
 
         LnButton.setText("ln");
 
         LogButton.setText("log");
 
         RootButton.setText("√");
+
+        ClearButton.setText("Clr");
+        ClearButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ClearButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,9 +223,11 @@ public class CalcView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Button7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Button4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Button7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Button4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ClearButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -201,7 +255,7 @@ public class CalcView extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(RootButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(AccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(ExpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(MultButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -248,7 +302,8 @@ public class CalcView extends javax.swing.JFrame {
                     .addComponent(Button0, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DivButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ResButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ExpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ClearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
         );
 
@@ -282,6 +337,42 @@ public class CalcView extends javax.swing.JFrame {
     private void Button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button2MouseClicked
         Screen.setText(Screen.getText() + "2" );
     }//GEN-LAST:event_Button2MouseClicked
+
+    private void Button3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button3MouseClicked
+        Screen.setText(Screen.getText() + "3" );
+    }//GEN-LAST:event_Button3MouseClicked
+
+    private void Button4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button4MouseClicked
+        Screen.setText(Screen.getText() + "4" );
+    }//GEN-LAST:event_Button4MouseClicked
+
+    private void Button5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button5MouseClicked
+        Screen.setText(Screen.getText() + "5" );
+    }//GEN-LAST:event_Button5MouseClicked
+
+    private void Button6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button6MouseClicked
+        Screen.setText(Screen.getText() + "6" );
+    }//GEN-LAST:event_Button6MouseClicked
+
+    private void Button7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button7MouseClicked
+        Screen.setText(Screen.getText() + "7" );
+    }//GEN-LAST:event_Button7MouseClicked
+
+    private void Button9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button9MouseClicked
+        Screen.setText(Screen.getText() + "9" );
+    }//GEN-LAST:event_Button9MouseClicked
+
+    private void Button8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button8MouseClicked
+        Screen.setText(Screen.getText() + "8" );
+    }//GEN-LAST:event_Button8MouseClicked
+
+    private void Button0MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button0MouseClicked
+        Screen.setText(Screen.getText() + "0" );
+    }//GEN-LAST:event_Button0MouseClicked
+
+    private void ClearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearButtonMouseClicked
+        Screen.setText("");
+    }//GEN-LAST:event_ClearButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -320,7 +411,6 @@ public class CalcView extends javax.swing.JFrame {
     } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AccButton;
     private javax.swing.JButton AddButton;
     private javax.swing.JButton Button0;
     private javax.swing.JButton Button1;
@@ -332,7 +422,9 @@ public class CalcView extends javax.swing.JFrame {
     private javax.swing.JButton Button7;
     private javax.swing.JButton Button8;
     private javax.swing.JButton Button9;
+    private javax.swing.JButton ClearButton;
     private javax.swing.JButton DivButton;
+    private javax.swing.JButton ExpButton;
     private javax.swing.JButton LnButton;
     private javax.swing.JButton LogButton;
     private javax.swing.JButton MultButton;
