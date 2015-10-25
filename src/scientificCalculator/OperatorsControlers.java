@@ -25,6 +25,9 @@ public class OperatorsControlers {
         theView.addButton(new addCalcButton());
         theView.divButton(new divCalcButton());
         theView.expButton(new expCalcButton());
+        theView.multButton(new multCalcButton());
+        theView.subButton(new subCalcButton());
+        
         theView.resBtn(new resCalcButton());
     }
      
@@ -46,6 +49,16 @@ public class OperatorsControlers {
                 number2 = Integer.parseInt(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.expoperation(number1, number2);
+                theView.setsol(opModel.getCalcSol());
+            } else if ("*".equals(operate)) {
+                number2 = Integer.parseInt(theView.getScreen().trim());
+                theView.screenClear();
+                opModel.multoperation(number1, number2);
+                theView.setsol(opModel.getCalcSol());
+            } else if ("-".equals(operate)) {
+                number2 = Integer.parseInt(theView.getScreen().trim());
+                theView.screenClear();
+                opModel.suboperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             }
             
@@ -80,6 +93,26 @@ public class OperatorsControlers {
         public void actionPerformed(ActionEvent e) {
             number1 = Integer.parseInt(theView.getScreen().trim());
             operate = "^";
+            theView.screenClear();
+        }
+    }
+    
+    class multCalcButton implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            number1 = Integer.parseInt(theView.getScreen().trim());
+            operate = "*";
+            theView.screenClear();
+        }
+    }
+    
+    class subCalcButton implements ActionListener {
+        
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            number1 = Integer.parseInt(theView.getScreen().trim());
+            operate = "-";
             theView.screenClear();
         }
     }

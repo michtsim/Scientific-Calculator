@@ -45,6 +45,15 @@ public class CalcView extends javax.swing.JFrame {
         ExpButton.addActionListener(exp);
     }
     
+    void multButton(ActionListener mult) {
+        MultButton.addActionListener(mult);
+    }
+    
+    void subButton(ActionListener sub) {
+        SubButton.addActionListener(sub);
+    }   
+    
+    
     void resBtn(ActionListener res){
         ResButton.addActionListener(res);
     }
