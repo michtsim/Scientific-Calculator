@@ -25,6 +25,14 @@ public class OperatorsModel {
        CalcSol = (int) Math.pow(number1, number2);
    }
    
+    public void multoperation(int number1, int number2) {
+       CalcSol = number1 * number2;
+   }
+    
+    public void suboperation(int number1, int number2) {
+       CalcSol = number1 - number2;
+   }
+   
    public int getCalcSol(){
        return CalcSol;
    }
