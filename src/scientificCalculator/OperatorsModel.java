@@ -11,29 +11,30 @@ package scientificCalculator;
  */
 public class OperatorsModel {
     
-   private int CalcSol;
+   private float CalcSol;
    
-   public void addoperation(int number1, int number2){
+   public void addoperation(float number1, float number2){
        CalcSol = number1 + number2; 
    }
    
-   public void divoperation(int number1, int number2) {
+   public void divoperation(float number1, float number2) {
        CalcSol = number1 / number2;
    }
    
-   public void expoperation(int number1, int number2) {
-       CalcSol = (int) Math.pow(number1, number2);
+   public void expoperation(float number1, float number2) {
+       CalcSol =  (float) Math.pow(number1, number2);
    }
    
-    public void multoperation(int number1, int number2) {
+    public void multoperation(float number1, float number2) {
        CalcSol = number1 * number2;
    }
     
-    public void suboperation(int number1, int number2) {
+    public void suboperation(float number1, float number2) {
        CalcSol = number1 - number2;
    }
+    
    
-   public int getCalcSol(){
+   public float getCalcSol(){
        return CalcSol;
    }
     

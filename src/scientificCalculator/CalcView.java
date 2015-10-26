@@ -20,8 +20,8 @@ public class CalcView extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void setsol(int data){
-        Screen.setText(Screen.getText()+ Integer.toString(data).trim());
+    public void setsol(float data){
+        Screen.setText(Screen.getText()+ Float.toString(data).trim());
     }
     
     public String getScreen(){

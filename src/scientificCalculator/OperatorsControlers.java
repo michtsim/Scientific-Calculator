@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 public class OperatorsControlers {
     private CalcView theView;
     private OperatorsModel opModel;
-    private int number1,number2;
+    private float number1,number2;
     private String operate ;
     
     
@@ -36,27 +36,27 @@ public class OperatorsControlers {
         @Override
         public void actionPerformed(ActionEvent e) {
             if("+".equals(operate)){
-                number2 = Integer.parseInt(theView.getScreen().trim());
+                number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.addoperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             } else if ("/".equals(operate)) {
-                number2 = Integer.parseInt(theView.getScreen().trim());
+                number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.divoperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             } else if ("^".equals(operate)) {
-                number2 = Integer.parseInt(theView.getScreen().trim());
+                number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.expoperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             } else if ("*".equals(operate)) {
-                number2 = Integer.parseInt(theView.getScreen().trim());
+                number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.multoperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             } else if ("-".equals(operate)) {
-                number2 = Integer.parseInt(theView.getScreen().trim());
+                number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
                 opModel.suboperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
@@ -71,7 +71,7 @@ public class OperatorsControlers {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            number1 = Integer.parseInt(theView.getScreen().trim());
+            number1 = Float.parseFloat(theView.getScreen().trim());
             operate="+";
             theView.screenClear();
         }  
@@ -81,7 +81,7 @@ public class OperatorsControlers {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            number1 = Integer.parseInt(theView.getScreen().trim());
+            number1 = Float.parseFloat(theView.getScreen().trim());
             operate = "/";
             theView.screenClear();
         }
@@ -91,7 +91,7 @@ public class OperatorsControlers {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            number1 = Integer.parseInt(theView.getScreen().trim());
+            number1 = Float.parseFloat(theView.getScreen().trim());
             operate = "^";
             theView.screenClear();
         }
@@ -101,7 +101,7 @@ public class OperatorsControlers {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            number1 = Integer.parseInt(theView.getScreen().trim());
+            number1 = Float.parseFloat(theView.getScreen().trim());
             operate = "*";
             theView.screenClear();
         }
@@ -111,7 +111,7 @@ public class OperatorsControlers {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            number1 = Integer.parseInt(theView.getScreen().trim());
+            number1 = Float.parseFloat(theView.getScreen().trim());
             operate = "-";
             theView.screenClear();
         }
