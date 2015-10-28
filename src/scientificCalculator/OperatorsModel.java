@@ -32,6 +32,11 @@ public class OperatorsModel {
     public void suboperation(float number1, float number2) {
        CalcSol = number1 - number2;
    }
+   
+    public void rootoperation(float number1){
+        CalcSol = (float) Math.sqrt((double) number1);
+    }
+    
     
    
    public float getCalcSol(){

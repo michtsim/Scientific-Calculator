@@ -27,6 +27,7 @@ public class OperatorsControlers {
         theView.expButton(new expCalcButton());
         theView.multButton(new multCalcButton());
         theView.subButton(new subCalcButton());
+        theView.rootBtn(new rootCalcButton());
         
         theView.resBtn(new resCalcButton());
     }
@@ -61,7 +62,6 @@ public class OperatorsControlers {
                 opModel.suboperation(number1, number2);
                 theView.setsol(opModel.getCalcSol());
             }
-            
             
         }  
     }
@@ -118,6 +118,16 @@ public class OperatorsControlers {
     }
     
     
-    
-    
+    class rootCalcButton implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            number1 = Float.parseFloat(theView.getScreen().trim());
+            opModel.rootoperation(number1);
+            theView.screenClear();
+            theView.setsol(opModel.getCalcSol());
+        }
+        
+    }
+       
 }
