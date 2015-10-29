@@ -32,6 +32,10 @@ public class OperatorsModel {
     public void suboperation(float number1, float number2) {
        CalcSol = number1 - number2;
    }
+    public void lnoperation(float number1) {
+       CalcSol = (float) Math.log(number1);
+   }
+
     
    
    public float getCalcSol(){
