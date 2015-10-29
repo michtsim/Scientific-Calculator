@@ -35,10 +35,6 @@ public class OperatorsModel {
     public void lnoperation(float number1) {
        CalcSol = (float) Math.log(number1);
    }
-    
-    public void rootoperation(float number1){
-        CalcSol= (float) Math.sqrt(number1);
-    }
 
     
    
