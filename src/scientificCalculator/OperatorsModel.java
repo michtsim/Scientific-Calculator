@@ -38,8 +38,10 @@ public class OperatorsModel {
    public void rootoperation(float number1){
        CalcSol= (float) Math.sqrt(number1);
    }
-    
-   
+   public void logoperation(float number1){
+       CalcSol= (float) Math.log10(number1);
+   }
+       
    public float getCalcSol(){
        return CalcSol;
    }

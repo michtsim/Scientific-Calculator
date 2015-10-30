@@ -65,6 +65,10 @@ public class CalcView extends javax.swing.JFrame {
     void rootbutton(ActionListener root){
         RootButton.addActionListener(root);
     }
+    
+    void logbutton(ActionListener log){
+        LogButton.addActionListener(log);
+    }
      
      
      
