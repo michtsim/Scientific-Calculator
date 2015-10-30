@@ -29,6 +29,8 @@ public class OperatorsControlers {
         theView.subButton(new subCalcButton());
         theView.lnButton(new lnCalcButton());
         theView.rootbutton(new rootCalcButton());
+        theView.logbutton(new logCalcButton());
+        
         
         
         theView.resBtn(new resCalcButton());
@@ -137,6 +139,19 @@ public class OperatorsControlers {
         public void actionPerformed(ActionEvent e) {
             number1 = Float.parseFloat(theView.getScreen().trim());
             opModel.rootoperation(number1);
+            theView.screenClear();
+            theView.setsol(opModel.getCalcSol());
+        }
+        
+          
+    }
+    
+    class logCalcButton implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            number1 = Float.parseFloat(theView.getScreen().trim());
+            opModel.logoperation(number1);
             theView.screenClear();
             theView.setsol(opModel.getCalcSol());
         }
