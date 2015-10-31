@@ -77,6 +77,10 @@ public class CalcView extends javax.swing.JFrame {
     void cosButton(ActionListener cos) {
         CosButton.addActionListener(cos);
     }
+    
+    void tanButton(ActionListener tan) {
+        TanButton.addActionListener(tan);
+    }
      
      
     
@@ -114,6 +118,7 @@ public class CalcView extends javax.swing.JFrame {
         ClearButton = new javax.swing.JButton();
         SinButton = new javax.swing.JButton();
         CosButton = new javax.swing.JButton();
+        TanButton = new javax.swing.JButton();
 
         jButton9.setText("jButton9");
 
@@ -249,6 +254,8 @@ public class CalcView extends javax.swing.JFrame {
 
         CosButton.setText("cos");
 
+        TanButton.setText("tan");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -306,7 +313,8 @@ public class CalcView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(SinButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -336,7 +344,8 @@ public class CalcView extends javax.swing.JFrame {
                     .addComponent(Button8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Button9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(MultButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LogButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Button0, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -474,6 +483,7 @@ public class CalcView extends javax.swing.JFrame {
     private javax.swing.JTextField Screen;
     private javax.swing.JButton SinButton;
     private javax.swing.JButton SubButton;
+    private javax.swing.JButton TanButton;
     private javax.swing.JButton jButton9;
     // End of variables declaration//GEN-END:variables
 }
