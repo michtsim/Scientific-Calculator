@@ -44,6 +44,10 @@ public class OperatorsModel {
    public void sinoperation(float number1){
        CalcSol= (float) Math.sin(number1);
    }
+   
+   public void cosOperation(float number1) {
+       CalcSol = (float) Math.cos(number1);
+   }
        
    public float getCalcSol(){
        return CalcSol;
