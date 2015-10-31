@@ -17,6 +17,7 @@ public class OperatorsControlers {
     private OperatorsModel opModel;
     private float number1,number2;
     private String operate ;
+    private float CalcSolou;
     
     
     public OperatorsControlers(CalcView theView, OperatorsModel opModel){
@@ -43,28 +44,28 @@ public class OperatorsControlers {
             if("+".equals(operate)){
                 number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
-                opModel.addoperation(number1, number2);
-                theView.setsol(opModel.getCalcSol());
+                CalcSolou=opModel.addoperation(number1, number2);
+                theView.setsol(CalcSolou);
             } else if ("/".equals(operate)) {
                 number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
-                opModel.divoperation(number1, number2);
-                theView.setsol(opModel.getCalcSol());
+                CalcSolou=opModel.divoperation(number1, number2);
+                theView.setsol(CalcSolou);
             } else if ("^".equals(operate)) {
                 number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
-                opModel.expoperation(number1, number2);
-                theView.setsol(opModel.getCalcSol());
+                CalcSolou=opModel.expoperation(number1, number2);
+                theView.setsol(CalcSolou);
             } else if ("*".equals(operate)) {
                 number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
-                opModel.multoperation(number1, number2);
-                theView.setsol(opModel.getCalcSol());
+                CalcSolou=opModel.multoperation(number1, number2);
+                theView.setsol(CalcSolou);
             } else if ("-".equals(operate)) {
                 number2 = Float.parseFloat(theView.getScreen().trim());
                 theView.screenClear();
-                opModel.suboperation(number1, number2);
-                theView.setsol(opModel.getCalcSol());
+                CalcSolou=opModel.suboperation(number1, number2);
+                theView.setsol(CalcSolou);
             }
             
             
@@ -127,9 +128,9 @@ public class OperatorsControlers {
         @Override
         public void actionPerformed(ActionEvent e) {
             number1 = Float.parseFloat(theView.getScreen().trim());
-            opModel.lnoperation(number1);
+            CalcSolou=opModel.lnoperation(number1);
             theView.screenClear();
-            theView.setsol(opModel.getCalcSol());
+            theView.setsol(CalcSolou);
         }
     }    
     
@@ -138,12 +139,11 @@ public class OperatorsControlers {
         @Override
         public void actionPerformed(ActionEvent e) {
             number1 = Float.parseFloat(theView.getScreen().trim());
-            opModel.rootoperation(number1);
+            CalcSolou=opModel.rootoperation(number1);
             theView.screenClear();
-            theView.setsol(opModel.getCalcSol());
+            theView.setsol(CalcSolou);
         }
-        
-          
+             
     }
     
     class logCalcButton implements ActionListener{
@@ -151,9 +151,9 @@ public class OperatorsControlers {
         @Override
         public void actionPerformed(ActionEvent e) {
             number1 = Float.parseFloat(theView.getScreen().trim());
-            opModel.logoperation(number1);
+            CalcSolou=opModel.logoperation(number1);
             theView.screenClear();
-            theView.setsol(opModel.getCalcSol());
+            theView.setsol(CalcSolou);
         }
         
           

@@ -13,37 +13,34 @@ public class OperatorsModel {
     
    private float CalcSol;
    
-   public void addoperation(float number1, float number2){
-       CalcSol = number1 + number2; 
+   public float addoperation(float number1, float number2){
+       return CalcSol = number1 + number2; 
    }
    
-   public void divoperation(float number1, float number2) {
-       CalcSol = number1 / number2;
+   public float divoperation(float number1, float number2) {
+       return CalcSol = number1 / number2;
    }
    
-   public void expoperation(float number1, float number2) {
-       CalcSol =  (float) Math.pow(number1, number2);
+   public float expoperation(float number1, float number2) {
+       return CalcSol =  (float) Math.pow(number1, number2);
    }
    
-    public void multoperation(float number1, float number2) {
-       CalcSol = number1 * number2;
+    public float multoperation(float number1, float number2) {
+       return CalcSol = number1 * number2;
    }
     
-    public void suboperation(float number1, float number2) {
-       CalcSol = number1 - number2;
+    public float suboperation(float number1, float number2) {
+       return CalcSol = number1 - number2;
    }
-    public void lnoperation(float number1) {
-       CalcSol = (float) Math.log(number1);
+    public float lnoperation(float number1) {
+      return CalcSol = (float) Math.log(number1);
    }
-   public void rootoperation(float number1){
-       CalcSol= (float) Math.sqrt(number1);
+   public float rootoperation(float number1){
+       return CalcSol= (float) Math.sqrt(number1);
    }
-   public void logoperation(float number1){
-       CalcSol= (float) Math.log10(number1);
+   public float logoperation(float number1){
+       return CalcSol= (float) Math.log10(number1);
    }
        
-   public float getCalcSol(){
-       return CalcSol;
-   }
     
 }
