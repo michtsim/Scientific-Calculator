@@ -48,6 +48,10 @@ public class OperatorsModel {
    public void cosOperation(float number1) {
        CalcSol = (float) Math.cos(number1);
    }
+   
+   public void tanOperation(float number1) {
+       CalcSol = (float) Math.tan(number1);
+   }
        
    public float getCalcSol(){
        return CalcSol;
