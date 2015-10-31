@@ -30,7 +30,7 @@ public class OperatorsControlers {
         theView.lnButton(new lnCalcButton());
         theView.rootbutton(new rootCalcButton());
         theView.logbutton(new logCalcButton());
-        
+        theView.sinButton(new sinCalcButton());
         
         
         theView.resBtn(new resCalcButton());
@@ -159,7 +159,16 @@ public class OperatorsControlers {
           
     }
     
-    
+    class sinCalcButton implements ActionListener{
+        
+        @Override
+        public void actionPerformed(ActionEvent e){
+            number1 = Float.parseFloat(theView.getScreen().trim());
+            opModel.sinoperation(number1);
+            theView.screenClear();
+            theView.setsol(opModel.getCalcSol());
+        }
+    }
     
     
 }

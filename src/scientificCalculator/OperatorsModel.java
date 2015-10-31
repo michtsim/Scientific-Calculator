@@ -41,6 +41,9 @@ public class OperatorsModel {
    public void logoperation(float number1){
        CalcSol= (float) Math.log10(number1);
    }
+   public void sinoperation(float number1){
+       CalcSol= (float) Math.sin(number1);
+   }
        
    public float getCalcSol(){
        return CalcSol;
