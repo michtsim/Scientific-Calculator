@@ -35,7 +35,7 @@
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Component id="Button7" max="32767" attributes="0"/>
                               <Component id="Button4" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
@@ -54,12 +54,12 @@
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="Button8" min="-2" pref="50" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="Button9" min="-2" pref="50" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="Button0" min="-2" pref="50" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="ResButton" min="-2" pref="50" max="-2" attributes="0"/>
@@ -67,7 +67,7 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="DivButton" min="-2" pref="50" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -75,7 +75,7 @@
                                           <Component id="ExpButton" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="MultButton" min="-2" pref="50" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="LogButton" min="-2" pref="50" max="-2" attributes="0"/>
@@ -84,7 +84,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="Button1" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="Button2" min="-2" pref="51" max="-2" attributes="0"/>
@@ -93,9 +93,11 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="AddButton" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="Screen" alignment="0" max="32767" attributes="0"/>
+                  <Component id="Screen" alignment="0" min="-2" pref="286" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="SinButton" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -111,6 +113,7 @@
                   <Component id="Button3" max="32767" attributes="0"/>
                   <Component id="AddButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="RootButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="SinButton" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -136,7 +139,7 @@
                   <Component id="ExpButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="ClearButton" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -305,6 +308,11 @@
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ClearButtonMouseClicked"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="SinButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="sin"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
